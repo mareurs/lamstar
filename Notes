@@ -1,0 +1,13 @@
+
+ - The update function in lamstar shouldn't update or create new nodes since there is
+no output node information.
+
+ - For image processing a decomposition in small areas of the image is more 
+ appropriate. For a image of 200x150 we can use 20x15 areas, thus rendering
+ 100 input words 
+ 
+
+ - For connections between the som modules themselves rather than maintaing a list of 
+ all existing node connections, we can add for each training a list of the existing
+ connections. The inter-module link score, which should be the most important, is 
+ givven by the largest contiguous area similar with the testing pattern.
